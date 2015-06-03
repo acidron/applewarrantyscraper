@@ -8,7 +8,7 @@ describe AppleWarranty do
 		expect(AppleWarranty.method_defined?(:check)).to eq(true)
 	end
 
-	it ".imei= should raise exception when invalid imei given" do
+	it "#imei= should raise exception when invalid imei given" do
 		expect { AppleWarranty.new.imei = 'invalidimei' }.to raise_error("InvalidImeiError")
 		expect { AppleWarranty.new.imei = 'Invalid358030053434523' }.to raise_error("InvalidImeiError")
 		expect { AppleWarranty.new.imei = '358030053434523' }.not_to raise_error
